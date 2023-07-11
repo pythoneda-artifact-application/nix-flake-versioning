@@ -155,7 +155,7 @@
               inherit description homepage license maintainers;
             };
           };
-        pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-for =
+        pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-for =
           { pythoneda-base, pythoneda-artifact-event-versioning
           , pythoneda-artifact-event-infrastructure-versioning
           , pythoneda-artifact-nix-flake-versioning
@@ -163,7 +163,7 @@
           , pythoneda-artifact-infrastructure-nix-flake-versioning
           , pythoneda-application-base, pythoneda-shared-git, python }:
           pythoneda-artifact-application-nix-flake-versioning-for {
-            version = "0.0.1a1";
+            version = "0.0.1a2";
             inherit pname pythoneda-base pythoneda-artifact-event-versioning
               pythoneda-artifact-event-infrastructure-versioning
               pythoneda-artifact-nix-flake-versioning
@@ -173,8 +173,8 @@
           };
       in rec {
         packages = rec {
-          pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python39 =
-            pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-for {
+          pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python39 =
+            pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-for {
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python39;
               pythoneda-artifact-event-versioning =
@@ -193,8 +193,8 @@
                 pythoneda-shared-git.packages.${system}.pythoneda-shared-git-latest-python39;
               python = pkgs.python39;
             };
-          pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python310 =
-            pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-for {
+          pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python310 =
+            pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-for {
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python310;
               pythoneda-artifact-event-versioning =
@@ -214,59 +214,59 @@
               python = pkgs.python310;
             };
           pythoneda-artifact-application-nix-flake-versioning-latest-python39 =
-            pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python39;
+            pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python39;
           pythoneda-artifact-application-nix-flake-versioning-latest-python310 =
-            pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python310;
+            pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python310;
           pythoneda-artifact-application-nix-flake-versioning-latest =
             pythoneda-artifact-application-nix-flake-versioning-latest-python310;
           default = pythoneda-artifact-application-nix-flake-versioning-latest;
         };
         defaultPackage = packages.default;
         apps = rec {
-          pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python39 =
+          pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python39 =
             shared.app-for {
               package =
-                self.packages.${system}.pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python39;
+                self.packages.${system}.pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python39;
               inherit pname;
             };
-          pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python310 =
+          pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python310 =
             shared.app-for {
               package =
-                self.packages.${system}.pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python310;
+                self.packages.${system}.pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python310;
               inherit pname;
             };
           pythoneda-artifact-application-nix-flake-versioning-latest-python39 =
-            pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python39;
+            pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python39;
           pythoneda-artifact-application-nix-flake-versioning-latest-python310 =
-            pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python310;
+            pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python310;
           pythoneda-artifact-application-nix-flake-versioning-latest =
             pythoneda-artifact-application-nix-flake-versioning-latest-python310;
           default = pythoneda-artifact-application-nix-flake-versioning-latest;
         };
         defaultApp = apps.default;
         devShells = rec {
-          pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python39 =
+          pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python39 =
             shared.devShell-for {
               package =
-                packages.pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python39;
+                packages.pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python39;
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python39;
               python = pkgs.python39;
               inherit pkgs nixpkgsRelease;
             };
-          pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python310 =
+          pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python310 =
             shared.devShell-for {
               package =
-                packages.pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python310;
+                packages.pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python310;
               pythoneda-base =
                 pythoneda-base.packages.${system}.pythoneda-base-latest-python310;
               python = pkgs.python310;
               inherit pkgs nixpkgsRelease;
             };
           pythoneda-artifact-application-nix-flake-versioning-latest-python39 =
-            pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python39;
+            pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python39;
           pythoneda-artifact-application-nix-flake-versioning-latest-python310 =
-            pythoneda-artifact-application-nix-flake-versioning-0_0_1a1-python310;
+            pythoneda-artifact-application-nix-flake-versioning-0_0_1a2-python310;
           pythoneda-artifact-application-nix-flake-versioning-latest =
             pythoneda-artifact-application-nix-flake-versioning-latest-python310;
           default = pythoneda-artifact-application-nix-flake-versioning-latest;
